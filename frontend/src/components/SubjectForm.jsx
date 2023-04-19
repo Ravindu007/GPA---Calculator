@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { useSubjectContext } from '../hooks/useSubjectContext'
 
 const SubjectForm = () => {
+
+  const {subjects, dispatch} = useSubjectContext()
 
   // input fields
   const [subjectName, setSubjectName] = useState("")
@@ -25,7 +28,7 @@ const SubjectForm = () => {
     const json = await response.json()
 
     if(response.ok){
-      console.log(json);
+      dispatch({type:"CREATE_SUBJECT", payload:json})
     }
   }
 

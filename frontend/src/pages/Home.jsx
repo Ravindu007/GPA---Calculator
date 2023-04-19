@@ -4,9 +4,10 @@ import "./Home.scss"
 import GPA_Card from '../components/GPA_Card'
 import SubjectForm from '../components/SubjectForm'
 import SubjectCard from '../components/SubjectCard'
+import { useSubjectContext } from '../hooks/useSubjectContext'
 const Home = () => {
 
-  const [subjects, setSubjects] = useState(null)
+  const {subjects, dispatch} = useSubjectContext()
 
   useEffect(()=>{
     const fetchAllSubjects = async() => {
@@ -14,7 +15,7 @@ const Home = () => {
       const json = await response.json()
 
       if(response.ok){
-        setSubjects(json)
+        dispatch({type:"GET_ALL_SUBJECTS", payload:json})
       }
     }
 

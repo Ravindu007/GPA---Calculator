@@ -14,6 +14,9 @@ const Home = () => {
   return (
     <div className='home'>
       <div className="container">
+        <div className="row title">
+          <h1>GPA Calculator</h1>
+        </div>
         <div className="row">
           <div className="col-8 subjects">
             {subjects && subjects.map((subject)=>(

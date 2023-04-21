@@ -1,0 +1,40 @@
+.gpa-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+}
+
+.gpa-card::before{
+  position: absolute;
+  content: '';
+  height: 150%;
+  width: 150%;
+  background: linear-gradient(blue, black );
+  animation: rotate 4s linear infinite;
+
+}
+
+.gpa-card::after{
+  content: '';
+  position: absolute;
+  background: #242424;
+  inset: 5px;
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }to{
+    transform: rotate(360deg);
+  }
+}

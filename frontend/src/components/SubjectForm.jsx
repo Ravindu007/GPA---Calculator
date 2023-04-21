@@ -29,6 +29,10 @@ const SubjectForm = () => {
 
     if(response.ok){
       dispatch({type:"CREATE_SUBJECT", payload:json})
+      setSubjectName('')
+      setGrade('')
+      setCredit('')
+      setSemester('')
     }
   }
 

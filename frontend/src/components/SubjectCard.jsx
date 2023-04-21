@@ -11,7 +11,7 @@ const SubjectCard = ({subject}) => {
           <p><span className='tag'>Credit: </span>{subject.credit}</p>
           <p><span className='tag'>Semester: </span>{subject.semester}</p>
 
-          <div className="btn-div">
+          {/* <div className="btn-div">
             <button 
               className='btn btn-outline-success'
               onClick={()=>{
@@ -19,7 +19,7 @@ const SubjectCard = ({subject}) => {
               }}
             >Update</button>
             <button className='btn btn-outline-danger'>Delete</button>
-          </div>
+          </div> */}
         </div>
       )}
       {isEditing && (
